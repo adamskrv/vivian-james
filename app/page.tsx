@@ -1,11 +1,10 @@
 import { Footer } from "@/components/Footer";
 import { Gallery } from "@/components/Gallery";
 import { Hero } from "@/components/Hero";
-import { Navigation } from "@/components/Navigation";
 import { RegistrySection } from "@/components/RegistrySection";
 import { SectionCards } from "@/components/SectionCards";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="min-h-screen bg-[#FAF8F5]">
       {/* <Navigation /> */}
@@ -16,4 +15,6 @@ export default function Home() {
       <Footer />
     </div>
   );
-}
+};
+
+export default Home;
