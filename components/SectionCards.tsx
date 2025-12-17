@@ -1,31 +1,33 @@
+import Link from "next/link";
+
 export function SectionCards() {
   const cards = [
     {
       id: "our-story",
       title: "OUR STORY",
-      image:
-        "https://images.unsplash.com/photo-1608610026390-8f5d34765c57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMGNvdXBsZSUyMGhhbmRzfGVufDF8fHx8MTc2NTk2Mjg1M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      url: "/Ourstory",
+      image: "/images/vj7.jpg",
       bgColor: "#1a1a1a",
     },
     {
       id: "details",
       title: "THE DETAILS",
-      image:
-        "https://images.unsplash.com/photo-1759124650154-da57bce8d7fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb2xkJTIwcGxhdGUlMjBlbGVnYW50JTIwZGlubmVyfGVufDF8fHx8MTc2NTk2Mjg1NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      url: "/Details",
+      image: "/images/vj6.jpg",
       bgColor: "#a39268",
     },
     {
       id: "rsvp",
       title: "RSVP",
-      image:
-        "https://images.unsplash.com/photo-1759178124741-8d3a8aaab778?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBidWlsZGluZyUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NjU5NjI4NTR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      url: "#rsvp",
+      image: "/images/vj8.jpg",
       bgColor: "#6b8aa3",
     },
     {
       id: "registry",
       title: "REGISTRY",
-      image:
-        "https://images.unsplash.com/photo-1738898179451-b5fc497f9f8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwaW52aXRhdGlvbiUyMHBhcGVyfGVufDF8fHx8MTc2NTk2Mjg1NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      url: "/https://www.amazon.ca/wedding/guest-view/33Z3IVXU7SIWH",
+      image: "/images/vj1.jpg",
       bgColor: "#9eafc2",
     },
   ];
@@ -35,9 +37,11 @@ export function SectionCards() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {cards.map((card) => (
-            <a
+            <Link
               key={card.id}
-              href={`#${card.id}`}
+              href={card.url}
+              target={card.id === "Registry" ? "_blank" : ""}
+              rel="noopener noreferrer"
               className="group relative aspect-4/5 overflow-hidden cursor-pointer rounded-md"
             >
               <div
@@ -57,7 +61,7 @@ export function SectionCards() {
                   {card.title}
                 </h2>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

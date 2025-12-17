@@ -1,9 +1,11 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -15,9 +17,9 @@ export function Navigation() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 md:border md:border-white/30 flex items-center justify-center ">
+              <div className="flex items-center justify-center ">
                 <span
-                  className="text-black md:text-white"
+                  className="text-black text-2xl md:text-white"
                   style={{ fontFamily: "serif" }}
                 >
                   V&J
@@ -32,25 +34,33 @@ export function Navigation() {
             <div className="hidden md:flex gap-8">
               <Link
                 href="/"
-                className="text-white text-sm tracking-wider hover:text-white/70 transition-colors"
+                className={`text-white text-sm ${
+                  pathname === "/" && "font-bold"
+                } tracking-wider hover:text-white/70 transition-colors underline decoration-1 underline-offset-8`}
               >
                 HOME
               </Link>
               <Link
-                href="#our-story"
-                className="text-white text-sm tracking-wider hover:text-white/70 transition-colors"
+                href="/Ourstory"
+                className={`text-white text-sm ${
+                  pathname === "/Ourstory" && "font-bold"
+                } tracking-wider hover:text-white/70 transition-colors underline decoration-1 underline-offset-8`}
               >
                 OUR STORY
               </Link>
               <Link
                 href="/Details"
-                className="text-white text-sm tracking-wider hover:text-white/70 transition-colors"
+                className={`text-white text-sm ${
+                  pathname === "/Details" && "font-bold"
+                } tracking-wider hover:text-white/70 transition-colors underline decoration-1 underline-offset-8`}
               >
                 DETAILS
               </Link>
               <Link
                 href="#rsvp"
-                className="text-white text-sm tracking-wider hover:text-white/70 transition-colors"
+                className={`text-white text-sm ${
+                  pathname === "#rsvp" && "font-bold"
+                } tracking-wider hover:text-white/70 transition-colors underline decoration-1 underline-offset-8`}
               >
                 RSVP
               </Link>

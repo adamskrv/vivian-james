@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function RegistrySection() {
   return (
     <section className="relative py-32 px-6">
@@ -19,9 +21,14 @@ export function RegistrySection() {
           on a memorable adventure together.
         </p>
 
-        <button className="bg-[#7d7662]/80 hover:bg-[#7d7662] text-white md:w-127.75 h-17 px-12 py-3 border border-white/30 rounded-full tracking-wider transition-all duration-300">
+        <Link
+          href={"https://www.amazon.ca/wedding/guest-view/33Z3IVXU7SIWH"}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#7d7662]/80 hover:bg-[#7d7662] text-white md:w-127.75 h-17 px-12 py-3 border border-white/30 rounded-full tracking-wider transition-all duration-300"
+        >
           GO TO REGISTRY
-        </button>
+        </Link>
       </div>
     </section>
   );
