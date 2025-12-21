@@ -31,10 +31,10 @@ const images = [
     position: "object-[75%_25%]",
   },
   {
-    url: "/images/vj3.jpg",
+    url: "/images/vj12.jpg",
     alt: "Wedding cake",
     className: "md:col-span-2",
-    position: "object-[75%_25%]",
+    position: "object-[60%_40%]",
   },
 ];
 
@@ -42,7 +42,13 @@ export function Gallery() {
   return (
     <section className="py-20 px-4 sm:px-6 bg-[#FAF8F5]">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-3xl tracking-[0.3em] mb-16 text-[#5a5a5a] uppercase">
+        <h2
+          className="text-center text-3xl tracking-[0.3em] mb-16 text-[#5a5a5a] uppercase"
+          style={{
+            fontFamily: "quintessential",
+            fontWeight: "lighter",
+          }}
+        >
           Gallery
         </h2>
 

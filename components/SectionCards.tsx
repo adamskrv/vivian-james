@@ -19,14 +19,14 @@ export function SectionCards() {
     {
       id: "rsvp",
       title: "RSVP",
-      url: "#rsvp",
+      url: "/Details",
       image: "/images/vj8.jpg",
       bgColor: "#6b8aa3",
     },
     {
       id: "registry",
       title: "REGISTRY",
-      url: "/https://www.amazon.ca/wedding/guest-view/33Z3IVXU7SIWH",
+      url: "https://www.amazon.ca/wedding/guest-view/33Z3IVXU7SIWH",
       image: "/images/vj1.jpg",
       bgColor: "#9eafc2",
     },

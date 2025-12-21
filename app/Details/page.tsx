@@ -1,4 +1,8 @@
 import Image from "next/image";
+import { Phone } from "lucide-react";
+import { FAQ } from "@/components/Faq";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const DetailsPage = () => {
   return (
@@ -8,103 +12,65 @@ const DetailsPage = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1761515712160-63a16d64ceac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3VudHJ5c2lkZSUyMGhvdXNlJTIwcGF0aHxlbnwxfHx8fDE3NjU5NzE3MDl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral')`,
+            backgroundImage: `url('/images/city.jpg')`,
           }}
         >
           <div className="absolute inset-0 bg-black/30" />
         </div>
 
         <div className="relative z-10 text-center text-white">
-          <h1 className="text-4xl md:text-5xl tracking-[0.3em]">THE DETAILS</h1>
+          <h1
+            className="text-4xl md:text-5xl tracking-[0.3em]"
+            style={{
+              fontFamily: "quintessential",
+              fontWeight: "lighter",
+            }}
+          >
+            THE DETAILS
+          </h1>
         </div>
       </section>
-
       {/* Welcome Message */}
+
       <section className="py-16 md:py-24 px-6">
-        <div className="max-w-2xl mx-auto bg-[#8B8272] text-white p-8 md:p-12 rounded-md">
-          <p className="text-center leading-relaxed mb-6">
-            We are thrilled to invite you to witness the beginning of our
-            journey as we exchange our vows and celebrate our love with those
-            who mean the most to us. Please join us!
-          </p>
-          <div className="flex justify-center">
-            <button className="bg-[#7d7662]/80 hover:bg-[#7d7662] text-white md:w-127.75 h-17 px-12 py-3 border border-white/30 rounded-full tracking-wider transition-all duration-300">
-              RSVP
-            </button>
-          </div>
-        </div>
-      </section>
+        <div className="max-w-4xl mx-auto bg-[#8B8272] text-white p-8 md:p-12 rounded-md">
+          <h2 className="text-center text-base md:text-xl font-bold mb-8 leading-tight">
+            You are Invited to the Wedding of
+            <br />
+            <span
+              className="text-3xl md:text-4xl"
+              style={{
+                fontFamily: "quintessential",
+                fontWeight: "lighter",
+              }}
+            >
+              Vivian and James
+            </span>
+            <br />
+            Saturday, February 7th, 2026
+          </h2>
 
-      {/* Church Image Section */}
-      <section className="px-6 pb-16 md:pb-24">
-        <div className="max-w-4xl mx-auto">
-          <div className="aspect-4/3 rounded-md overflow-hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1661721098019-0a0e9e406768?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjB0b3dlciUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NjU5NzE3MDl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Church"
-              width={100}
-              height={100}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Event Details */}
-      <section className="py-16 md:py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-sm tracking-wider text-[#5a5a5a] mb-2">
-              Saturday,
+          <div className="space-y-6">
+            <p className="text-center leading-relaxed mb-8">
+              We are thrilled to invite you to witness the beginning of our
+              journey as we exchange our vows and celebrate our love with those
+              who mean the most to us. Please join us!
             </p>
-            <p className="text-2xl tracking-wide text-[#5a5a5a]">
-              September 20, 2025
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16">
-            {/* Ceremony */}
-            <div className="text-center">
-              <h3 className="text-xl tracking-wider mb-6 text-[#5a5a5a]">
-                Ceremony
-              </h3>
-              <div className="space-y-3 text-[#5a5a5a]">
-                <p className="tracking-wide">The Sundew Church</p>
-                <p className="text-sm">123 Main Street</p>
-                <p className="text-sm">St. Augustine, New York</p>
-                <p className="text-sm mt-6">4:00 PM - 5:00 PM</p>
-              </div>
-            </div>
-
-            {/* Reception */}
-            <div className="text-center">
-              <h3 className="text-xl tracking-wider mb-6 text-[#5a5a5a]">
-                Reception
-              </h3>
-              <div className="space-y-3 text-[#5a5a5a]">
-                <p className="tracking-wide">The Golden Film Manor</p>
-                <p className="text-sm">456 Garden Avenue</p>
-                <p className="text-sm">St. Augustine, New York</p>
-                <p className="text-sm mt-6">6:00 PM - 11:00 PM</p>
+            <div className="space-y-4">
+              {/* Inquiries */}
+              <div className="flex flex-col md:flex-row md:items-center md:space-x-6 md:space-y-0 space-y-2 pt-4 border-t border-white/20">
+                <h3 className="font-semibold text-lg flex items-center space-x-2">
+                  <Phone className="w-5 h-5" />
+                  <span>For Inquiries</span>
+                </h3>
+                <div className="space-y-1 md:space-y-0 md:space-x-6 md:flex md:items-center">
+                  <p>Rita Ugochukwu: +234 708 575 7483</p>
+                  <p>Onyeka Nwakaeze: +234 803 136 206</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Plan A Stay Section */}
-      <section className="relative h-[50vh] md:h-[60vh] flex items-center justify-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1670240157655-d54885414ea5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmVlbiUyMGhpbGxzJTIwbGFuZHNjYXBlfGVufDF8fHx8MTc2NTk3MTcxMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral')`,
-          }}
-        >
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
-
-        <div className="relative z-10 text-center text-white">
-          <h2 className="text-3xl md:text-4xl tracking-[0.3em]">PLAN A STAY</h2>
         </div>
       </section>
 
@@ -116,24 +82,31 @@ const DetailsPage = () => {
             <div>
               <div className="aspect-4/3 rounded-md overflow-hidden mb-6">
                 <Image
-                  src="https://images.unsplash.com/photo-1650770028842-d9bd0fbc94f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcmllZCUyMGZsb3dlcnMlMjBib3RhbmljYWx8ZW58MXx8fHwxNzY1OTcxNzEwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Botanical decoration"
-                  width={100}
-                  height={100}
+                  src="/images/church.jpg"
+                  alt="church"
+                  width={500}
+                  height={500}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="bg-[#F5EFE7] p-8 rounded-md text-center">
-                <h3 className="text-lg tracking-wider mb-4 text-[#5a5a5a]">
-                  Golden Elm Manor Boutique
+                <h3
+                  className="text-xl tracking-wider mb-4 text-[#5a5a5a] font-bold"
+                  style={{
+                    fontFamily: "quintessential",
+                    // fontWeight: "lighter",
+                  }}
+                >
+                  Wedding Ceremony
                 </h3>
-                <p className="text-sm text-[#5a5a5a] leading-relaxed mb-4">
-                  Indulge in the charm of our historic boutique hotel, where
-                  modern comfort meets timeless elegance. Nestled near all
-                  ceremony and reception venues.
+                <p className="text-base text-[#5a5a5a] leading-relaxed mb-4">
+                  Holy Rosary Catholic Church Wuse Abuja
                 </p>
-                <p className="text-sm text-[#5a5a5a]">123 Oak Street</p>
-                <p className="text-sm text-[#5a5a5a]">St. Augustine, NY</p>
+                <p className="text-base text-[#5a5a5a]">Time: 11:30am prompt</p>
+                <p className="text-base text-[#5a5a5a]">
+                  Wedding Photo start at 1pm
+                </p>
               </div>
             </div>
 
@@ -141,28 +114,42 @@ const DetailsPage = () => {
             <div>
               <div className="aspect-4/3 rounded-md overflow-hidden mb-6">
                 <Image
-                  src="https://images.unsplash.com/photo-1652881389205-9f85f82888c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwaG90ZWwlMjByb29tfGVufDF8fHx8MTc2NTk3MTcxMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src="/images/map2.png"
                   alt="Hotel room"
-                  width={100}
-                  height={100}
+                  width={500}
+                  height={500}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="bg-[#F5EFE7] p-8 rounded-md text-center">
-                <h3 className="text-lg tracking-wider mb-4 text-[#5a5a5a]">
-                  The Refined Retreat Inn
+                <h3
+                  className="text-xl tracking-wider mb-4 text-[#5a5a5a] font-bold"
+                  style={{
+                    fontFamily: "quintessential",
+                    // fontWeight: "lighter",
+                  }}
+                >
+                  Wedding reception
                 </h3>
-                <p className="text-sm text-[#5a5a5a] leading-relaxed mb-4">
-                  Experience luxurious comfort in our contemporary inn, offering
-                  spacious suites and exceptional amenities. A perfect base for
-                  your celebration.
+                <p className="text-base text-[#5a5a5a] leading-relaxed mb-4">
+                  Decency event centre zone 5 Wuse abuja
                 </p>
-                <p className="text-sm text-[#5a5a5a]">789 Maple Drive</p>
-                <p className="text-sm text-[#5a5a5a]">St. Augustine, NY</p>
+                <p className="text-base text-[#5a5a5a]">
+                  Immediately After Church Service
+                </p>
+                <p className="text-base text-[#5a5a5a]">
+                  Colors of the day: Peach, brown and Gold
+                </p>
               </div>
             </div>
           </div>
         </div>
+      </section>
+
+      {/* FAQ section */}
+      <section className="py-16 md:py-24 px-6 flex items-center justify-center">
+        <FAQ className="max-w-6xl md:min-w-7xl" />
       </section>
 
       {/* Registry Section */}
@@ -177,7 +164,13 @@ const DetailsPage = () => {
         </div>
 
         <div className="relative z-10 max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl tracking-[0.3em] mb-6 text-white">
+          <h2
+            className="text-3xl tracking-[0.3em] mb-6 text-white"
+            style={{
+              fontFamily: "quintessential",
+              fontWeight: "lighter",
+            }}
+          >
             REGISTRY
           </h2>
 
@@ -187,12 +180,20 @@ const DetailsPage = () => {
             the following locations.
           </p>
 
-          <button className="bg-white/10 hover:bg-white/20 text-white px-12 py-3 border border-white/30 tracking-wider transition-all duration-300">
-            VIEW REGISTRY
-          </button>
+          <Button
+            asChild
+            className="bg-white/10 hover:bg-white/20 text-white px-12 py-3 border border-white/30 tracking-wider transition-all duration-300 rounded-full h-17"
+          >
+            <Link
+              href={"https://www.amazon.ca/wedding/guest-view/33Z3IVXU7SIWH"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              VIEW REGISTRY
+            </Link>
+          </Button>
         </div>
       </section>
-
       {/* Footer */}
       <section className="bg-[#F5EFE7] py-16 px-6 text-center">
         <div className="mb-4" style={{ fontFamily: "serif" }}>

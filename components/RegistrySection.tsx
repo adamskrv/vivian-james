@@ -13,7 +13,15 @@ export function RegistrySection() {
       </div>
 
       <div className="relative z-10 max-w-2xl mx-auto text-center">
-        <h2 className="text-white text-3xl tracking-[0.3em] mb-8">REGISTRY</h2>
+        <h2
+          className="text-white text-3xl tracking-[0.3em] mb-8"
+          style={{
+            fontFamily: "quintessential",
+            fontWeight: "lighter",
+          }}
+        >
+          REGISTRY
+        </h2>
 
         <p className="text-white/90 text-lg mb-8 leading-relaxed max-w-lg mx-auto">
           Your presence is the most cherished gift. Should you wish to

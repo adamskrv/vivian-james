@@ -56,14 +56,6 @@ export function Navigation() {
               >
                 DETAILS
               </Link>
-              <Link
-                href="#rsvp"
-                className={`text-white text-sm ${
-                  pathname === "#rsvp" && "font-bold"
-                } tracking-wider hover:text-white/70 transition-colors underline decoration-1 underline-offset-8`}
-              >
-                RSVP
-              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -82,7 +74,7 @@ export function Navigation() {
         <div className="fixed h-[70vh] bg-[#EEEEEB] rounded-b-lg inset-0 z-40 md:hidden pt-24 px-6">
           <nav className="flex flex-col items-center justify-center h-[70vh] space-y-12 pb-32">
             <Link
-              href="#home"
+              href="/"
               onClick={closeMenu}
               className="text-black text-2xl tracking-wide underline decoration-1 underline-offset-8"
               style={{ fontFamily: "serif" }}
@@ -90,7 +82,7 @@ export function Navigation() {
               HOME
             </Link>
             <Link
-              href="#our-story"
+              href="/Ourstory"
               onClick={closeMenu}
               className="text-black text-2xl tracking-wide underline decoration-1 underline-offset-8"
               style={{ fontFamily: "serif" }}
@@ -98,7 +90,7 @@ export function Navigation() {
               OUR STORY
             </Link>
             <Link
-              href="#details"
+              href="/Details"
               onClick={closeMenu}
               className="text-black text-2xl tracking-wide underline decoration-1 underline-offset-8"
               style={{ fontFamily: "serif" }}
@@ -106,12 +98,12 @@ export function Navigation() {
               DETAILS
             </Link>
 
-            <button
+            {/* <button
               onClick={closeMenu}
               className="bg-[#7d7662] text-white px-24 py-4 rounded-full tracking-wider mt-8"
             >
               RSVP
-            </button>
+            </button> */}
           </nav>
         </div>
       )}
