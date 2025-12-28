@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Quintessential } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
+import localFont from "next/font/local";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +20,11 @@ const quintessential = Quintessential({
   subsets: ["latin"],
 });
 
+const bickham = localFont({
+  src: "./fonts/Bickham-Script-Pro-Regular.ttf",
+  variable: "--font-special",
+});
+
 export const metadata: Metadata = {
   title: "Vivian & James",
   description: "Vivian and James wedding website",
@@ -32,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${quintessential.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${quintessential.variable} ${bickham.variable} antialiased`}
         suppressHydrationWarning={true}
       >
         <div className="block">
