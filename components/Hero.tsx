@@ -8,7 +8,7 @@ export function Hero() {
     >
       <div className="sticky h-[40vh] w-full flex flex-col gap-2 justify-center items-center top-0 left-0 right-0 bottom-0 bg-[#F5EFE7] px-6">
         <h1
-          className="text-6xl md:text-[100px] lg:text-[200px] tracking-wide font-light font-[family-name:var(--font-special)]"
+          className="text-6xl md:text-[150px] lg:text-[250px] tracking-wide font-light font-[family-name:var(--font-special)]"
           // style={{
           //   fontFamily: "quintessential",
           //   fontWeight: "lighter",
