@@ -15,7 +15,7 @@ export function Hero() {
           }}
         >
           <RevealText delay={0} direction="up">
-            Vivian & James
+            VIVIAN & JAMES
           </RevealText>
         </h1>
         <p
