@@ -8,11 +8,11 @@ export function Hero() {
     >
       <div className="sticky h-[40vh] w-full flex flex-col gap-2 justify-center items-center top-0 left-0 right-0 bottom-0 bg-[#F5EFE7] px-6">
         <h1
-          className="text-6xl md:text-9xl tracking-wide font-light"
-          style={{
-            fontFamily: "quintessential",
-            fontWeight: "lighter",
-          }}
+          className="text-6xl md:text-9xl tracking-wide font-light font-serif"
+          // style={{
+          //   fontFamily: "inter",
+          //   fontWeight: "lighter",
+          // }}
         >
           <RevealText delay={0} direction="up">
             Vivian & James
